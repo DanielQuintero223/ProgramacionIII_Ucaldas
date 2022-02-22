@@ -1,0 +1,83 @@
+
+// De este comentario en adelante es los request sobre los usuarios 
+
+###
+POST http://localhost:3000/api/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "usuario1",
+    "lastname":"garcia",
+    "addres": {
+        "city": "manizales",
+        "zipCode": 1700006,
+        "lat": 1000,
+        "length": 4000
+    },
+    "account_bank": "bancolombia"
+}
+
+//lista de usuarios
+###
+GET http://localhost:3000/api/user HTTP/1.1
+
+###
+GET http://localhost:3000/api/user/id HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/user/621450759970406e8a683e7b HTTP/1.1
+
+
+###
+PUT http://localhost:3000/api/user/621450699970406e8a683e79 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "usuario2",
+    "lastname":25,
+    "addres": {
+        "city": "manizales",
+        "zipcode": 1700006,
+        "lat": 1000,
+        "length": 4000
+    },
+    "account_bank": "bancolombia"
+}
+
+//Aqui termina el request de usuarios
+
+
+//Aqui empieza el request de productos
+
+###
+POST http://localhost:3000/api/product HTTP/1.1
+Content-Type: application/json
+
+{
+    "product":"producto02",
+    "img": "/img/Avatar2017-xboxOne3.webp",
+    "price": 18000,
+    "cant": 2,
+    "state": true
+}
+
+//listar productos
+
+###
+GET http://localhost:3000/api/product HTTP/1.1
+
+###
+GET http://localhost:3000/api/product/id HTTP/1.1
+
+
+
+###
+DELETE http://localhost:3000/api/product/id HTTP/1.1
+
+###
+PUT http://localhost:3000/api/product/62145afa0de685e0268b8635 HTTP/1.1
+
+{
+    "price": 20000,
+}
+
